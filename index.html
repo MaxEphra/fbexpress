@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Felipe Batista Express | Entregas Rápidas em São Paulo</title>
+
+    <meta name="description" content="Serviços de entregas rápidas, cartórios, bancos, logística expressa e transporte de cargas no Centro de São Paulo. Atendimento ágil e confiável.">
+
+    <meta name="keywords" content="motoboy São Paulo, entregas rápidas SP, serviços de cartório, logística expressa, entregas urgentes, transporte de documentos">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://felipebatista.express/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Felipe Batista Express | Entregas Rápidas em São Paulo">
+    <meta property="og:description" content="Motoboy, cartórios, bancos e logística expressa no Centro de SP. Atendimento rápido.">
+    <meta property="og:image" content="https://felipebatista.express/img/preview.jpeg">
+    <meta property="og:url" content="https://felipebatista.express/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Felipe Batista Express">
+    <meta name="twitter:description" content="Serviços rápidos de entrega e logística em São Paulo">
+    <meta name="twitter:image" content="https://felipebatista.express/img/preview.png">
+
+    <!-- SEO Local (Structured Data) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CourierService",
+      "name": "Felipe Batista Express",
+      "url": "https://felipebatista.express",
+      "areaServed": "São Paulo",
+      "description": "Serviços de entregas rápidas, logística expressa e serviços externos em São Paulo.",
+      "telephone": "+5511974397410",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Largo Sete de Setembro, 52",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "postalCode": "01501-050",
+        "addressCountry": "BR"
+      }
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0,1" rel="stylesheet" />
+
+    <style>
+        /* ========== ESTILOS COMPLETOS (mantidos do código anterior) ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #25D366;
+            --primary-dark: #b71c1c;
+            --secondary: #212121;
+            --light: #f5f5f5;
+            --whatsapp: #25D366;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--secondary);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        h1, h2, h3 {
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-wpp {
+            background-color: var(--whatsapp);
+        }
+
+        .btn-wpp:hover {
+            background-color: #128C7E;
+        }
+
+        .btn:hover {
+            background-color: var(--whatsapp);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(33,33,33,0.95);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero com imagem de fundo */
+        #hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url('https://cdn.pixabay.com/photo/2016/07/08/15/44/banner-1504653_1280.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 1rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+
+        /* Sobre */
+        #sobre {
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary);
+            margin: 0.5rem auto;
+        }
+
+        .sobre-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .sobre-text {
+            flex: 1;
+        }
+
+        .sobre-image {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            background: #e9e0d7;
+            background-image: url('https://www.davidsonsilva.com.br/wp-content/uploads/2023/04/bg-whatsapp.png');
+            background-size: cover;
+            padding: 1rem;
+        }
+
+        /* Componente WhatsApp dentro da seção Sobre */
+        #wpp-fix {
+            position: relative;
+            width: 100%;
+        }
+
+        .wpp-link {
+            background: var(--whatsapp);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: white;
+            font-weight: bold;
+            gap: 8px;
+        }
+        .wpp-link svg {
+            height: 28px;
+            width: auto;
+        }
+        .wpp-link svg path {
+            fill: white;
+        }
+        .wpp-link span {
+            font-size: 1rem;
+        }
+        .wpp-link:hover {
+            background: #128C7E;
+            transform: scale(1.02);
+        }
+        .form-wpp {
+            margin-top: 15px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .head-wpp {
+            background: #075E54;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+        }
+        .head-wpp i {
+            font-size: 1.8rem;
+        }
+        .head-wpp h3 {
+            margin: 0;
+            flex: 1;
+            font-size: 1.1rem;
+        }
+        .close {
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+        .form-content {
+            padding: 16px;
+            background: #f0f2f5;
+        }
+        .buss-msg {
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+        .buss-msg::before {
+            content: '';
+            position: absolute;
+            border-top: 8px solid white;
+            border-right: 8px solid white;
+            border-bottom: 8px solid transparent;
+            border-left: 8px solid transparent;
+            left: -8px;
+            top: 8px;
+        }
+        .campo {
+            margin-bottom: 12px;
+        }
+        .form-control-wrap input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+        .btn button {
+            background: var(--whatsapp);
+            border: none;
+            width: 100%;
+            padding: 10px;
+            border-radius: 40px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: 0.2s;
+        }
+        .btn button:hover {
+            background: #128C7E;
+        }
+        .response-output {
+            font-size: 0.8rem;
+            text-align: center;
+            margin-top: 8px;
+        }
+        .submitting .response-output {
+            color: #666;
+        }
+        .sent .response-output {
+            background: #d4edda;
+            padding: 8px;
+            border-radius: 8px;
+        }
+        .mask {
+            display: none;
+        }
+
+        /* Serviços */
+        #servicos {
+            background-color: #f9f9f9;
+        }
+
+        .servicos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .servico-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .servico-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .servico-icon {
+            background-color: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+
+        .servico-content {
+            padding: 1.5rem;
+        }
+
+        /* Frota */
+        #frota {
+            background-color: white;
+        }
+
+        .frota-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .frota-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .frota-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .frota-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .frota-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .frota-card:hover .frota-image img {
+            transform: scale(1.1);
+        }
+
+        .frota-content {
+            padding: 1.5rem;
+        }
+
+        /* Diferenciais */
+        #diferenciais {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            text-align: center;
+            padding: 4rem 0;
+            position: relative;
+        }
+
+        .diferenciais-content h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .diferenciais-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .diferenciais-content .btn {
+            background-color: white;
+            color: var(--primary);
+            font-size: 1.1rem;
+            padding: 1rem 2rem;
+        }
+
+        /* Contato */
+        #contato {
+            background-color: #f9f9f9;
+        }
+
+        .contato-content {
+            display: flex;
+            gap: 3rem;
+        }
+
+        .contato-info {
+            flex: 1;
+        }
+
+        .contato-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .contato-icon {
+            background-color: var(--primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .contato-form {
+            flex: 1;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+
+        textarea.form-control {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .form-status {
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            display: none;
+            text-align: center;
+        }
+
+        .form-status.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .form-status.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary);
+            color: white;
+            padding: 3rem 0 1.5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo span {
+            color: var(--primary);
+        }
+
+        .footer-links h3 {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .footer-links h3::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 3px;
+            background-color: var(--primary);
+            margin-top: 0.5rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--primary);
+        }
+
+        .footer-whatsapp a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: var(--whatsapp);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .footer-whatsapp a:hover {
+            transform: scale(1.02);
+            background-color: #128C7E;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #bbb;
+        }
+
+        /* Botão flutuante WhatsApp */
+        .floating-wpp {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+            width: 60px;
+            height: 60px;
+            background-color: var(--whatsapp);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .floating-wpp i {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .floating-wpp:hover {
+            transform: scale(1.1);
+            background-color: #128C7E;
+        }
+
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .hero-content h1 { font-size: 2.8rem; }
+            .sobre-content { flex-direction: column; }
+            .contato-content { flex-direction: column; }
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle { display: block; }
+            nav {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--secondary);
+                padding: 1rem 0;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+            }
+            nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li { margin: 0.8rem 0; }
+            .hero-content h1 { font-size: 2.2rem; }
+            section { padding: 3rem 0; }
+        }
+
+        @media (max-width: 576px) {
+            .hero-content h1 { font-size: 1.8rem; }
+            .diferenciais-content h2 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- ========== CONTEÚDO COMPLETO (mantido igual ao anterior) ========== -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">Felipe <span>Batista Express</span></div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#frota">Frota</a></li>
+                    <li><a href="#diferenciais">Diferenciais</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero com imagem de fundo -->
+    <section id="hero">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Entrega rápida, segura e eficiente em São Paulo</h1>
+            <h3>Felipe Batista Express: soluções ágeis de transporte e serviços externos no Centro Histórico.</h3>
+            <br>
+            <a href="https://wa.me/5511974397410?text=Olá!%20Gostaria%20de%20solicitar%20uma%20entrega%20ou%20saber%20mais%20sobre%20os%20serviços." class="btn btn-wpp"><i class="fab fa-whatsapp"></i> Solicite sua Entrega no WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre">
+        <div class="container">
+            <h2 class="section-title">Sobre Nós</h2>
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <p>Localizada no Centro de São Paulo, a Felipe Batista Express nasceu para facilitar rotinas empresariais e pessoais com serviços externos e logísticos confiáveis.</p>
+                    <p>Atendemos desde pequenas entregas até demandas complexas envolvendo órgãos públicos, cartórios e instituições financeiras.</p>
+                    <p>Com equipe comprometida e frota própria, garantimos pontualidade e segurança.</p>
+                    <p><strong>Endereço:</strong><br>
+                    <a href="https://share.google/FN7tUrppNS06ZhZHe" style="color: var(--primary);">Largo Sete de Setembro, 52<br>Centro Histórico de São Paulo – SP<br>CEP: 01501-050</a></p>
+                </div>
+                <div class="sobre-image">
+                    <!-- Componente WhatsApp completo -->
+                    <div id="wpp-fix" class="right shake">
+                        <button id="wpp-link" class="wpp-form wpp-link">
+                            <span>Chamar no WhatsApp</span>
+                            <svg height="682pt" viewBox="-23 -21 682 682.667" width="682pt" xmlns="https://www.w3.org/2000/svg"><path d="M544.387 93.008C484.512 33.063 404.883.035 320.05 0 145.246 0 2.98 142.262 2.91 317.113c-.024 55.895 14.577 110.457 42.331 158.551L.25 640l168.121-44.102c46.324 25.27 98.477 38.586 151.55 38.602h.134c174.785 0 317.066-142.273 317.132-317.133.036-84.742-32.921-164.418-92.8-224.36zM320.05 580.94h-.11c-47.296-.02-93.683-12.73-134.16-36.742l-9.62-5.715-99.766 26.172 26.628-97.27-6.27-9.972c-26.386-41.969-40.32-90.476-40.296-140.281.055-145.332 118.305-263.57 263.7-263.57 70.406.023 136.59 27.476 186.355 77.3s77.156 116.051 77.133 186.485C583.582 462.69 465.34 580.94 320.05 580.94zm144.586-197.418c-7.922-3.968-46.883-23.132-54.149-25.78-7.258-2.645-12.547-3.962-17.824 3.968-5.285 7.93-20.469 25.781-25.094 31.066-4.625 5.29-9.242 5.953-17.168 1.985-7.925-3.965-33.457-12.336-63.726-39.332-23.555-21.012-39.457-46.961-44.082-54.89-4.617-7.938-.04-11.813 3.476-16.173 8.578-10.652 17.168-21.82 19.809-27.105 2.644-5.29 1.32-9.918-.664-13.883-1.977-3.965-17.824-42.969-24.426-58.84-6.437-15.445-12.965-13.36-17.832-13.601-4.617-.231-9.902-.278-15.187-.278-5.282 0-13.868 1.98-21.133 9.918-7.262 7.934-27.73 27.102-27.73 66.106s28.394 76.683 32.355 81.972c3.96 5.29 55.879 85.328 135.367 119.649 18.906 8.172 33.664 13.043 45.176 16.695 18.984 6.031 36.254 5.18 49.91 3.14 15.226-2.277 46.879-19.171 53.488-37.68 6.602-18.51 6.602-34.374 4.617-37.683-1.976-3.304-7.261-5.285-15.183-9.254zm0 0" fill-rule="evenodd"></path></svg>     
+                        </button>
+                        <div class="form-wpp">
+                            <div class="head-wpp">
+                                <i class="fab fa-whatsapp" style="color: #dcf8c6;"></i>
+                                <h3>Chame no WhatsApp</h3>
+                                <i class="material-symbols-sharp close" id="close-bt">close</i>
+                            </div>
+                            <div class="form-content">
+                                <b class="buss-msg">Olá, precisa de um orçamento? Me informe seus dados, por favor.</b>
+                                <form action="/" method="post" id="wpp-form">
+                                    <div class="campo">
+                                        <label for="nome" class="hidden">Nome</label>
+                                        <span class="form-control-wrap">
+                                            <input type="text" name="nome" placeholder="Nome" required>
+                                        </span>
+                                    </div>
+                                    <div class="campo">
+                                        <label for="telefone" class="hidden">Telefone</label>
+                                        <span class="form-control-wrap">
+                                            <input type="text" name="telefone" id="telefone-wpp" placeholder="Telefone" maxlength="15" pattern=".{14,15}" title="Insira um telefone válido" required />
+                                        </span>
+                                    </div>
+                                    <div class="campo">
+                                        <label for="email" class="hidden">Email</label>
+                                        <span class="form-control-wrap">
+                                            <input type="email" name="email" placeholder="E-mail" required />
+                                        </span>
+                                    </div>
+                                    <div class="btn whatsapp">
+                                        <button type="submit">
+                                            Iniciar conversa
+                                            <i class="material-symbols-sharp">send</i>
+                                        </button>
+                                    </div>
+                                    <div class="response-output"></div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="mask"></div>                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos">
+        <div class="container">
+            <h2 class="section-title">Nossos Serviços</h2>
+            <div class="servicos-grid">
+                <div class="servico-card">
+                    <div class="servico-icon"><i class="fas fa-truck"></i></div>
+                    <div class="servico-content"><h3>Entregas e Logística</h3><p>Entregas rápidas, envio de documentos e malotes.</p></div>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon"><i class="fas fa-building"></i></div>
+                    <div class="servico-content"><h3>Serviços Externos</h3><p>Cartórios, repartições públicas, bancos e correios.</p></div>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <div class="servico-content"><h3>Serviços Administrativos</h3><p>Entrega de boletos, retirada de documentos e convites.</p></div>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon"><i class="fas fa-motorcycle"></i></div>
+                    <div class="servico-content"><h3>Logística Expressa</h3><p>Atendimento prioritário para urgências.</p></div>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon"><i class="fas fa-boxes"></i></div>
+                    <div class="servico-content"><h3>Transporte de Cargas</h3><p>Veículos utilitários para cargas maiores.</p></div>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon"><i class="fas fa-clock"></i></div>
+                    <div class="servico-content"><h3>Atendimento Rápido</h3><p>Conhecimento das rotinas do Centro de SP.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Frota -->
+    <section id="frota">
+        <div class="container">
+            <h2 class="section-title">Nossa Frota</h2>
+            <div class="frota-grid">
+                <div class="frota-card">
+                    <div class="frota-image"><img src="https://www.jornalavozdomotoboy.com.br/images/noticias/1059/76f6315cef47012be59d815b240e6d76.webp" alt="Motos"></div>
+                    <div class="frota-content"><h3>Motocicletas</h3><p>Agilidade para entregas expressas.</p></div>
+                </div>
+                <div class="frota-card">
+                    <div class="frota-image"><img src="https://s2-autoesporte.glbimg.com/0Bre2Y1KUrgTp8ltX65vMmIyVM4=/0x0:620x413/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_cf9d035bf26b4646b105bd958f32089d/internal_photos/bs/2020/r/v/YVQz9TTBiA1M5CyLtyDQ/2020-06-03-fiat-fiorino-2021-1.jpeg" alt="Utilitários"></div>
+                    <div class="frota-content"><h3>Veículos Utilitários</h3><p>Maior capacidade para encomendas.</p></div>
+                </div>
+                <div class="frota-card">
+                    <div class="frota-image"><img src="https://cdn.prod.website-files.com/67d2cd7e700eb793f98a2e81/67d83412305cf405c7984e49_ia-frotas.jpg" alt="Frota moderna"></div>
+                    <div class="frota-content"><h3>Frota Moderna</h3><p>Segurança e eficiência em cada entrega.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section id="diferenciais">
+        <div class="container diferenciais-content">
+            <h2>Diferenciais que Fazem a Diferença</h2>
+            <p>Atendimento rápido e personalizado • Conhecimento do Centro de SP • Agilidade em processos burocráticos • Segurança no transporte</p>
+            <a href="#contato" class="btn">Fale Conosco pelo WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato">
+        <div class="container">
+            <h2 class="section-title">Solicite seu serviço agora</h2>
+            <div class="contato-content">
+                <div class="contato-info">
+                    <div class="contato-item">
+                        <div class="contato-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div><h3>Endereço</h3><a href="https://share.google/FN7tUrppNS06ZhZHe"style="color: var(--primary);">Largo Sete de Setembro, 52<br>Centro Histórico – SP</a></div>
+                    </div>
+                    <div class="contato-item">
+                        <div class="contato-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div><h3>WhatsApp</h3><a href="https://wa.me/5511974397410"style="color: var(--primary);">(11) 97439-7410</a></div>
+                    </div>
+                    <div class="contato-item">
+                        <div class="contato-icon"><i class="fas fa-clock"></i></div>
+                        <div><h3>Horário</h3><b>Segunda a Sexta: 08h às 18h<br>Sábado: 08h às 12h</b></div>
+                    </div>
+                </div>
+                <div class="contato-form">
+                    <div class="form-status success" id="formSuccess"></div>
+                    <div class="form-status error" id="formError"></div>
+                    <form id="whatsappForm">
+                        <div class="form-group">
+                            <label for="nome">Nome Completo *</label>
+                            <input type="text" id="nome" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">Telefone/WhatsApp *</label>
+                            <input type="tel" id="telefone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="servico">Serviço desejado *</label>
+                            <select id="servico" class="form-control" required>
+                                <option value="" disabled selected>Selecione</option>
+                                <option>Entregas e Logística</option>
+                                <option>Serviços Externos (cartórios, bancos)</option>
+                                <option>Serviços Administrativos</option>
+                                <option>Logística Expressa</option>
+                                <option>Transporte de Cargas</option>
+                                <option>Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem adicional</label>
+                            <textarea id="mensagem" class="form-control" placeholder="Descreva sua necessidade..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-wpp" style="width:100%"><i class="fab fa-whatsapp"></i> Enviar via WhatsApp</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Felipe <span>Batista Express</span></div>
+                    <p>Entregas rápidas, seguras e eficientes em São Paulo.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#hero">Início</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-whatsapp">
+                    <h3>Atendimento</h3>
+                    <a href="https://wa.me/5511974397410" target="_blank"><i class="fab fa-whatsapp"></i> Fale conosco</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Felipe Batista Express. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão flutuante WhatsApp -->
+    <a href="https://wa.me/5511974397410?text=Olá!%20Gostaria%20de%20informações%20sobre%20os%20serviços." class="floating-wpp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Menu mobile
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        menuToggle.addEventListener('click', () => mainNav.classList.toggle('active'));
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => mainNav.classList.remove('active'));
+        });
+
+        // ================== COMPONENTE WHATSAPP (com limpeza e formatação igual ao contato) ==================
+        const wppButton = document.getElementById('wpp-link');
+        const wppForm = document.getElementById('wpp-form');
+        const closeButton = document.getElementById('close-bt');
+        const phoneWpp = document.getElementById('telefone-wpp');
+        const maskWpp = document.querySelector('#wpp-fix .mask');
+        const responseWpp = document.querySelector('#wpp-form .response-output');
+
+        function getData(form) {
+            var formData = new FormData(form);
+            return Object.fromEntries(formData);
+        }
+
+        function phoneMask(value) {
+            if (!value) return '';
+            value = value.replace(/\D/g,'');
+            value = value.replace(/(\d{2})(\d)/,"($1) $2");
+            value = value.replace(/(\d)(\d{4})$/,"$1-$2");
+            return value;
+        }
+
+        if (phoneWpp) {
+            phoneWpp.onkeyup = e => phoneWpp.value = phoneMask(e.target.value);
+        }
+
+        if (wppButton) {
+            wppButton.onclick = () => { 
+                wppButton.classList.add('hide-this');
+            };
+        }
+
+        if (maskWpp) {
+            maskWpp.onclick = () => {
+                if (wppButton) wppButton.classList.remove('hide-this');
+            };
+        }
+
+        if (closeButton) {
+            closeButton.onclick = () => {
+                if (wppButton) wppButton.classList.remove('hide-this');
+            };
+        }
+
+        if (wppForm) {
+            wppForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const formData = getData(e.target);
+                const nome = formData.nome || '';
+                const telefone = formData.telefone || '';
+                const email = formData.email || '';
+
+                if (!nome || !telefone || !email) {
+                    if (responseWpp) responseWpp.innerHTML = '<p style="color: red;">Preencha todos os campos!</p>';
+                    setTimeout(() => { if (responseWpp) responseWpp.innerHTML = ''; }, 3000);
+                    return;
+                }
+
+                wppForm.classList.add('submitting');
+                if (responseWpp) responseWpp.innerHTML = '<p>Enviando...</p>';
+                
+                setTimeout(() => {
+                    wppForm.classList.remove('submitting');
+                    wppForm.classList.add('sent');
+                    
+                    // Monta a mensagem no mesmo formato do formulário de contato
+                    let texto = `*Novo contato pelo site (componente WhatsApp)*%0A%0A`;
+                    texto += `*Nome:* ${nome}%0A`;
+                    texto += `*Telefone:* ${telefone}%0A`;
+                    texto += `*E-mail:* ${email}%0A`;
+                    texto += `%0A*Origem:* Formulário flutuante na seção Sobre Nós`;
+                    
+                    const url = `https://wa.me/5511974397410?text=${texto}`;
+                    window.open(url, '_blank');
+                    
+                    // Limpa os campos do formulário
+                    e.target.reset();
+                    if (phoneWpp) phoneWpp.value = '';
+                    if (responseWpp) responseWpp.innerHTML = '<p>Mensagem enviada! Redirecionando...</p>';
+                    
+                    setTimeout(() => {
+                        // Fecha o formulário após o envio (opcional)
+                        if (wppButton) wppButton.classList.remove('hide-this');
+                        if (responseWpp) responseWpp.innerHTML = '';
+                        wppForm.classList.remove('sent');
+                    }, 3000);
+                }, 1000);
+            });
+        }
+
+        document.addEventListener('keyup', e => {
+            if (e.key == 'Escape' && wppButton) {
+                wppButton.classList.remove('hide-this');
+            }
+        });
+
+        // ================== FORMULÁRIO DE CONTATO PRINCIPAL ==================
+        const form = document.getElementById('whatsappForm');
+        const successDiv = document.getElementById('formSuccess');
+        const errorDiv = document.getElementById('formError');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const nome = document.getElementById('nome').value.trim();
+            const telefone = document.getElementById('telefone').value.trim();
+            const servico = document.getElementById('servico').value;
+            const mensagem = document.getElementById('mensagem').value.trim();
+
+            if (!nome || !telefone || !servico) {
+                errorDiv.textContent = 'Por favor, preencha nome, telefone e serviço desejado.';
+                errorDiv.style.display = 'block';
+                successDiv.style.display = 'none';
+                setTimeout(() => errorDiv.style.display = 'none', 4000);
+                return;
+            }
+
+            let texto = `*Novo contato pelo site*%0A%0A`;
+            texto += `*Nome:* ${nome}%0A`;
+            texto += `*Telefone:* ${telefone}%0A`;
+            texto += `*Serviço:* ${servico}%0A`;
+            if (mensagem) texto += `*Mensagem:* ${mensagem}%0A`;
+            texto += `%0A*Origem:* Formulário do site Felipe Batista Express`;
+
+            const url = `https://wa.me/5511974397410?text=${texto}`;
+            window.open(url, '_blank');
+
+            form.reset();
+            successDiv.textContent = 'Redirecionando para o WhatsApp...';
+            successDiv.style.display = 'block';
+            errorDiv.style.display = 'none';
+            setTimeout(() => successDiv.style.display = 'none', 4000);
+        });
+
+        // Formatação do campo telefone do formulário principal
+        const telInput = document.getElementById('telefone');
+        telInput.addEventListener('input', () => {
+            let v = telInput.value.replace(/\D/g, '');
+            if (v.length > 10) telInput.value = v.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+            else if (v.length > 6) telInput.value = v.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
+            else if (v.length > 2) telInput.value = v.replace(/(\d{2})(\d{0,5})/, '($1) $2');
+            else telInput.value = v;
+        });
+    </script>
+</body>
+</html>
